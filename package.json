@@ -1,0 +1,11 @@
+{
+  "name": "logomagic-ai",
+  "version": "1.0.0",
+  "description": "AI logo generation platform with auth, analytics, and advanced visual design",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js"
+  }
+}

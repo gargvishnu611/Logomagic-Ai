@@ -1,0 +1,110 @@
+:root {
+  --bg: #05070f;
+  --text: #f4f7ff;
+  --card: rgba(255, 255, 255, 0.08);
+  --accent: #7c5cff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #182039, #05070f 48%);
+}
+
+a { color: #c8d1ff; text-decoration: none; margin: 0 12px; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  z-index: 50;
+}
+
+.brand { font-weight: 700; letter-spacing: 0.4px; }
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+}
+
+.hero {
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 26px;
+  position: relative;
+  z-index: 4;
+}
+
+.layer {
+  position: absolute;
+  inset: auto;
+  border-radius: 999px;
+  filter: blur(8px);
+}
+
+.layer-back { width: 320px; height: 320px; background: #422be4; bottom: -40px; left: 5%; }
+.layer-mid { width: 260px; height: 260px; background: #10b4ff99; top: 20%; right: 10%; }
+.layer-front { width: 220px; height: 220px; background: #ff3ea199; bottom: 18%; right: 30%; }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 22px;
+}
+
+.card, .panel {
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.skeuo {
+  background: linear-gradient(145deg, #1c2440, #0d1224);
+  box-shadow: inset 2px 2px 5px #3e4a7a55, inset -4px -4px 8px #00000080, 0 14px 30px #00000066;
+  border: 1px solid #7481b533;
+}
+
+.workspace {
+  display: grid;
+  gap: 20px;
+  padding: 22px;
+}
+
+.auth-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+form { display: grid; gap: 10px; }
+input, textarea, select, button {
+  width: 100%;
+  border: 1px solid #8290c755;
+  background: #0e1530;
+  color: #f5f7ff;
+  padding: 10px;
+  border-radius: 10px;
+}
+button {
+  cursor: pointer;
+  background: linear-gradient(90deg, #5e61ff, #8f4cff);
+  border: none;
+  box-shadow: 0 6px 20px #704fff66;
+}
+pre {
+  white-space: pre-wrap;
+  background: #030716;
+  border: 1px solid #ffffff1f;
+  padding: 14px;
+  border-radius: 12px;
+  min-height: 80px;
+}
