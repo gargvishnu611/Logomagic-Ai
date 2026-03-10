@@ -1,34 +1,37 @@
-# Logomagic AI
+# Logomagic AI Platform (Enterprise Blueprint MVP)
 
-A full-stack starter for an advanced AI logo platform that supports:
-- text or image-based logo prompts
-- 3D logo and animated logo modes
-- login/register with per-user private history
-- owner/admin analytics (total users, total logos, type breakdown)
-- premium visuals (parallax, glassmorphism, skeuomorphic cards, faux-depth effects)
+This repository now contains a **multi-page AI logo platform scaffold** with:
 
-## Run locally
+- Public pages: Home, Features, Generator, 3D, Animated, Brand Kit, Mascot, Gallery, Pricing, Blog, About, Contact, FAQ, Marketplace.
+- User pages: Dashboard, Library, Editor, Settings, Billing, Downloads.
+- Admin pages: Admin Dashboard, Users, Analytics, Stats, Subscriptions, Moderation, System Monitoring.
+- Theme system: Futuristic, Glassmorphism, Minimal, Creative, Dark Professional.
+- Auth + role system: register/login, admin role by configured owner email.
+- Logo pipeline API: supports text/image/sketch input concepts and 2D/3D/animated/mascot/brand-kit outputs.
+- Private user data: `/api/dashboard/me` only returns current user history.
+- Admin analytics: `/api/admin/overview` returns platform metrics.
+- Security basics: PBKDF2 password hashing, signed tokens, simple rate limiting, security headers.
+- SEO assets: `robots.txt`, `sitemap.xml`, rich page metadata.
+
+## Run
 
 ```bash
-npm install
 npm start
 ```
 
-Then open `http://localhost:3000`.
+Open: `http://localhost:3000`
 
-## Admin account
+## Environment variables
 
-By default, `owner@logomagic.ai` becomes admin on registration. You can override this:
+- `PORT` (default `3000`)
+- `ADMIN_EMAIL` (default `owner@logomagic.ai`)
+- `JWT_SECRET` (default `super-secret-change-me`)
 
-```bash
-ADMIN_EMAIL=you@yourdomain.com npm start
-```
-
-## API summary
+## Key APIs
 
 - `POST /api/auth/register`
 - `POST /api/auth/login`
-- `GET /api/auth/me`
+- `GET /api/public/stats`
 - `POST /api/logo/generate`
 - `GET /api/dashboard/me`
-- `GET /api/dashboard/admin` (admin only)
+- `GET /api/admin/overview` (admin only)

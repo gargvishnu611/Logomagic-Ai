@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logo Generator | Logomagic AI</title>
+  <meta name="description" content="Advanced AI logo generator with brand questionnaire and multi-output support." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+  <strong>Logomagic AI</strong>
+  <nav class="nav"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="admin.html">Admin</a></nav>
+  <select id="themePicker"><option value="futuristic">Futuristic</option><option value="glass">Glass</option><option value="minimal">Minimal</option><option value="creative">Creative</option><option value="darkpro">Dark Professional</option></select>
+</header>
+<main>
+  <section class="grid">
+    <article class="card">
+      <h2>Register</h2>
+      <form id="registerForm"><input name="name" placeholder="Name" required /><input name="email" type="email" placeholder="Email" required /><input name="password" type="password" placeholder="Password" required /><button>Register</button></form>
+      <h2>Login</h2>
+      <form id="loginForm"><input name="email" type="email" placeholder="Email" required /><input name="password" type="password" placeholder="Password" required /><button>Login</button></form>
+      <p id="authStatus"></p>
+    </article>
+    <article class="card skeuo">
+      <h2>AI Logo Generator</h2>
+      <form id="logoForm">
+        <select name="input_mode"><option value="text">Text prompt</option><option value="image">Image upload concept</option><option value="sketch">Sketch</option></select>
+        <input name="business_name" placeholder="Business name" required />
+        <input name="industry" placeholder="Industry" required />
+        <input name="target_audience" placeholder="Target audience" required />
+        <input name="competitors" placeholder="Competitors" />
+        <textarea name="prompt" placeholder="Describe your logo vision" required></textarea>
+        <select name="logo_type"><option value="standard">2D</option><option value="3d">3D</option><option value="animated">Animated</option><option value="mascot">Mascot</option><option value="brand-kit">Brand Kit</option></select>
+        <input name="style_preset" placeholder="Style preset" required />
+        <input name="brand_personality" placeholder="Brand personality" required />
+        <input name="color_palette" placeholder="Color palette" required />
+        <select name="visual_theme"><option value="futuristic">Futuristic AI</option><option value="glass">Glassmorphism</option><option value="minimal">Minimalist</option><option value="creative">Creative Designer</option><option value="darkpro">Dark Professional</option></select>
+        <button>Generate</button>
+      </form>
+      <pre id="logoResult"></pre>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2>User Data</h2>
+    <button id="loadMyData">Load My Dashboard</button>
+    <pre id="myData"></pre>
+    <h2>Admin Data</h2>
+    <button id="loadAdminData">Load Admin Overview</button>
+    <pre id="adminData"></pre>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

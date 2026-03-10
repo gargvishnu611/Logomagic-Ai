@@ -1,124 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logomagic AI | Text & Image to 3D + Animated Logos</title>
-    <meta
-      name="description"
-      content="Build human-level logos with advanced AI: text/image prompts, 3D logos, animated logos, SEO-oriented brand strategy, and user analytics dashboard."
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar glass">
-      <div class="brand">Logomagic AI</div>
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#generator">Generator</a>
-        <a href="#dashboard">Dashboard</a>
-      </nav>
-    </header>
-
-    <section class="hero parallax">
-      <div class="hero-content glass">
-        <h1>Most Powerful AI Logo Studio</h1>
-        <p>
-          Create human-quality logos from text or image ideas. Generate 3D and animated concepts with SEO-ready brand descriptions,
-          and launch visuals designed to rank and convert.
-        </p>
-      </div>
-      <div class="layer layer-back"></div>
-      <div class="layer layer-mid"></div>
-      <div class="layer layer-front"></div>
-    </section>
-
-    <section id="features" class="features">
-      <article class="card skeuo">
-        <h3>Parallax + Faux Dimensional UX</h3>
-        <p>Layered depth, floating shadows, and spatial scroll effects inspired by modern creative portfolios.</p>
-      </article>
-      <article class="card glass">
-        <h3>Glassmorphism Interface</h3>
-        <p>Translucent controls and premium gradients that feel advanced and futuristic like high-end AI products.</p>
-      </article>
-      <article class="card skeuo">
-        <h3>Smart SEO Branding AI</h3>
-        <p>Every generation includes title, description, and keywords to help your brand pages rank faster.</p>
-      </article>
-    </section>
-
-    <main class="workspace" id="generator">
-      <section class="panel glass">
-        <h2>Login / Register</h2>
-        <div class="auth-grid">
-          <form id="registerForm">
-            <h3>Create account</h3>
-            <input required name="name" placeholder="Full name" />
-            <input required name="email" type="email" placeholder="Email" />
-            <input required name="password" type="password" placeholder="Password (min 6)" />
-            <button type="submit">Register</button>
-          </form>
-
-          <form id="loginForm">
-            <h3>Sign in</h3>
-            <input required name="email" type="email" placeholder="Email" />
-            <input required name="password" type="password" placeholder="Password" />
-            <button type="submit">Login</button>
-          </form>
-        </div>
-        <p id="authStatus"></p>
-      </section>
-
-      <section class="panel skeuo">
-        <h2>AI Logo Generator</h2>
-        <form id="logoForm" class="logo-form">
-          <label>Input Mode
-            <select name="input_mode" required>
-              <option value="text">Text prompt</option>
-              <option value="image">Image concept prompt</option>
-            </select>
-          </label>
-          <label>Prompt / Brand idea
-            <textarea name="prompt" required placeholder="e.g. futuristic fintech lion mark with trusted feel"></textarea>
-          </label>
-          <label>Logo Type
-            <select name="logo_type" required>
-              <option value="standard">Standard</option>
-              <option value="3d">3D Logo</option>
-              <option value="animated">Animated Logo</option>
-            </select>
-          </label>
-          <label>Style preset
-            <select name="style_preset" required>
-              <option>Minimal luxury</option>
-              <option>Tech neon</option>
-              <option>Retro 8-bit inspired</option>
-              <option>Corporate premium</option>
-            </select>
-          </label>
-          <label>Brand tone
-            <input required name="brand_tone" placeholder="Professional, playful, bold..." />
-          </label>
-          <label>Color palette
-            <input required name="color_palette" placeholder="Navy + Cyan + White" />
-          </label>
-          <button type="submit">Generate Logo</button>
-        </form>
-        <pre id="logoResult"></pre>
-      </section>
-
-      <section class="panel glass" id="dashboard">
-        <h2>User Dashboard</h2>
-        <button id="loadMyData">Load My Data</button>
-        <pre id="myData"></pre>
-
-        <h3>Owner/Admin Insights</h3>
-        <button id="loadAdminData">Load Platform Stats</button>
-        <pre id="adminData"></pre>
-      </section>
-    </main>
-
-    <script src="app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Logo Generator Platform | Logomagic AI</title>
+  <meta name="description" content="Generate 2D, 3D, animated, mascot logos and brand kits with enterprise-grade AI workflows." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+  <strong>Logomagic AI</strong>
+  <nav class="nav">
+    <a href="features.html">Features</a><a href="generator.html">Logo Generator</a><a href="3d.html">3D</a><a href="animated.html">Animated</a><a href="brand-kit.html">Brand Kit</a><a href="mascot.html">Mascot</a><a href="gallery.html">Gallery</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  </nav>
+  <select id="themePicker"><option value="futuristic">Futuristic</option><option value="glass">Glass</option><option value="minimal">Minimal</option><option value="creative">Creative</option><option value="darkpro">Dark Professional</option></select>
+</header>
+<main>
+  <section class="hero">
+    <div class="layer one"></div><div class="layer two"></div>
+    <h1>World-Class AI Logo Generator Platform</h1>
+    <p>Convert text prompts, sketches, and images into premium 2D, 3D, animated, mascot logos and full brand identity kits.</p>
+    <p id="publicStats"></p>
+    <div class="grid">
+      <article class="card"><h3>Live AI Demo</h3><p>Try instant previews from prompt: “Futuristic gaming logo with neon blue colors”.</p><a href="generator.html"><button>Try Generator</button></a></article>
+      <article class="card skeuo"><h3>Brand Questionnaire</h3><p>Collect business name, audience, competitors, personality and style to drive more human-like results.</p></article>
+      <article class="card"><h3>Growth Ready</h3><p>SEO architecture, blogs, templates marketplace, and scalable multi-page structure.</p></article>
+    </div>
+  </section>
+  <h2 class="section-title">Platform Sections</h2>
+  <section class="grid">
+    <article class="card"><h3>User Area</h3><ul class="list"><li>Dashboard</li><li>Logo Library</li><li>Editor Studio</li><li>Billing</li></ul></article>
+    <article class="card"><h3>Admin Area</h3><ul class="list"><li>Users Management</li><li>AI Analytics</li><li>Moderation</li><li>System Monitoring</li></ul></article>
+    <article class="card"><h3>Public Growth</h3><ul class="list"><li>Gallery</li><li>Pricing</li><li>Blog SEO</li><li>Marketplace</li></ul></article>
+  </section>
+</main>
+<footer class="footer">Built for creators, startups, and agencies.</footer>
+<script src="app.js"></script>
+</body>
 </html>
