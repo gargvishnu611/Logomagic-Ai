@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:3000/index.html</loc></url>
+  <url><loc>http://localhost:3000/features.html</loc></url>
+  <url><loc>http://localhost:3000/generator.html</loc></url>
+  <url><loc>http://localhost:3000/3d.html</loc></url>
+  <url><loc>http://localhost:3000/animated.html</loc></url>
+  <url><loc>http://localhost:3000/brand-kit.html</loc></url>
+  <url><loc>http://localhost:3000/mascot.html</loc></url>
+  <url><loc>http://localhost:3000/gallery.html</loc></url>
+  <url><loc>http://localhost:3000/pricing.html</loc></url>
+  <url><loc>http://localhost:3000/blog.html</loc></url>
+  <url><loc>http://localhost:3000/about.html</loc></url>
+  <url><loc>http://localhost:3000/contact.html</loc></url>
+  <url><loc>http://localhost:3000/faq.html</loc></url>
+  <url><loc>http://localhost:3000/marketplace.html</loc></url>
+  <url><loc>http://localhost:3000/dashboard.html</loc></url>
+  <url><loc>http://localhost:3000/library.html</loc></url>
+  <url><loc>http://localhost:3000/editor.html</loc></url>
+  <url><loc>http://localhost:3000/settings.html</loc></url>
+  <url><loc>http://localhost:3000/billing.html</loc></url>
+  <url><loc>http://localhost:3000/downloads.html</loc></url>
+  <url><loc>http://localhost:3000/admin.html</loc></url>
+  <url><loc>http://localhost:3000/admin-users.html</loc></url>
+  <url><loc>http://localhost:3000/admin-analytics.html</loc></url>
+  <url><loc>http://localhost:3000/admin-stats.html</loc></url>
+  <url><loc>http://localhost:3000/admin-subscriptions.html</loc></url>
+  <url><loc>http://localhost:3000/admin-moderation.html</loc></url>
+  <url><loc>http://localhost:3000/admin-system.html</loc></url>
+</urlset>
