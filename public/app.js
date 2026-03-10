@@ -15,7 +15,123 @@ async function api(path, options = {}) {
   return data;
 }
 
-function bindTheme() {
+function bindTheme() {const state = {
+
+  token: localStorage.getItem('token') || '',
+
+  role: localStorage.getItem('role') || 'user',
+
+  theme: localStorage.getItem('theme') || 'futuristic'
+
+};
+
+document.documentElement.setAttribute('data-theme', state.theme);
+
+const authStatus = document.getElementById('authStatus');
+
+const logoResult = document.getElementById('logoResult');
+
+const myData = document.getElementById('myData');
+
+const adminData = document.getElementById('adminData');
+
+function setSession(token, role) {
+const state = {
+
+  token: localStorage.getItem('token') || '',
+
+  role: localStorage.getItem('role') || 'user',
+
+  theme: localStorage.getItem('theme') || 'futuristic'
+
+};
+
+document.documentElement.setAttribute('data-theme', state.theme);
+
+const authStatus = document.getElementById('authStatus');
+
+const logoResult = document.getElementById('logoResult');
+
+const myData = document.getElementById('myData');
+
+const adminData = document.getElementById('adminData');
+
+function setSession(token, role) {
+
+  state.token = token;
+
+  state.role = role;
+
+  localStorage.setItem('token', token);
+
+  localStorage.setItem('role', role);
+
+  if (authStatus) {
+
+    authStatus.textContent = `Logged in as ${role}`;
+
+  }
+
+}
+
+async function api(path, options = {}) {
+
+  const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
+
+  if (state.token) {
+
+    headers.Authorization = `Bearer ${state.token}`;
+
+  }
+
+  const res = await fetch(path, {
+
+    ...options,
+
+    headers
+
+  });
+
+  return res.json();
+
+}
+  state.token = token;
+
+  state.role = role;
+
+  localStorage.setItem('token', token);
+
+  localStorage.setItem('role', role);
+
+  if (authStatus) {
+
+    authStatus.textContent = `Logged in as ${role}`;
+
+  }
+
+}
+
+async function api(path, options = {}) {
+
+  const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
+
+  if (state.token) {
+
+    headers.Authorization = `Bearer ${state.token}`;
+
+  }
+
+  const res = await fetch(path, {
+
+    ...options,
+
+    headers
+
+  });
+
+  return res.json();
+
+}
   const picker = document.getElementById('themePicker');
   if (!picker) return;
   picker.value = state.theme;
